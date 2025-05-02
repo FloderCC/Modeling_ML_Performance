@@ -208,4 +208,4 @@ df_train['y_pred'] = y_pred_train
 df_train['y_true'] = y_train
 #remove the columns that are not y_pred or y_true
 df_train = df_train[['y_true', 'y_pred']]
-df_train.to_csv('plots/regression_results_train.csv', index=False)
+# df_train.to_csv('plots/regression_results_train.csv', index=False)

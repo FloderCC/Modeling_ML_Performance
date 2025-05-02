@@ -127,23 +127,21 @@ df_test[target_column] = y_test
 # --- Symbolic regression expression ---
 
 def predict(df):
-    return (
-        -0.293132 *
-        (2.22779 - 0.265802 * df['nrclass']) *
-        np.exp((8.71127 - 3.36003 * df['classent']) * (-2.73854e-5 * df['nrinst'] - 0.236498)) -
-        0.293132 *
-        np.log(
-            0.00253841 * df['nsratio'] +
-            1.54523 * np.sqrt(
-                np.sqrt(
-                    (1 - 0.328412 * df['model type']) *
-                    (0.00517046 * df['nrbin'] - 1)**2 *
-                    (-0.687664 * df['classent'] + 0.129062 * df['eqnumattr'] - 0.0522563 * df['nrbin'] + 1)**2
-                ) + 0.00969895
-            ) - 0.183288
+    return -0.338562 * (0.282499 - 0.000113429 * df['nsratio']) * (
+        np.exp(
+            (0.293483 * df['nrclass'] - 1.70344) *
+            (7.71223e-6 * df['nrinst'] - 0.065635) /
+            (0.0171938 * df['nrattr'] + 0.0156131)
         ) +
-        0.653408
-    )
+        np.log(
+            0.03567 *
+            (0.512779 - df['model type'])**2 *
+            (1 - 0.344915 * df['model type'])**2 *
+            (1 - 0.00509974 * df['nrbin'])**2 *
+            (-0.0148831 * df['nrbin'] - 1)**2 *
+            (-0.660629 * df['classent'] + 0.145713 * df['eqnumattr'] - 0.0605958 * df['nrbin'] + 1)**2
+        )
+    ) + 0.181424
 
 
 # --- Rename columns to match expression variable names ---
@@ -188,8 +186,8 @@ print(f"Test dataset ({len(y_test)} rows): R^2: {round(test_r2, 3)}, Adjusted R^
 # plot_regression_results(y_train, y_pred_train, 'Regression Predictions vs. True Values (Train Set)', 'MCC', 'train')
 plot_regression_results(y_test, y_pred_test, 'Regression Predictions vs. True Values (Test Set)', 'MCC', 'test')
 
-# Train dataset (20668 rows): R^2: 0.378, Adjusted R^2: 0.377, sMAPE: 0.512, MAE: 0.206
-# Test dataset (5167 rows): R^2: 0.361, Adjusted R^2: 0.36, sMAPE: 0.515, MAE: 0.209
+# Train dataset (20668 rows): R^2: 0.51, Adjusted R^2: 0.509, sMAPE: 0.501, MAE: 0.185
+# Test dataset (5167 rows): R^2: 0.508, Adjusted R^2: 0.506, sMAPE: 0.504, MAE: 0.186
 
 # exporting a csv with the real and predicted values
 df_test['y_pred'] = y_pred_test
@@ -205,4 +203,4 @@ df_train['y_pred'] = y_pred_train
 df_train['y_true'] = y_train
 #remove the columns that are not y_pred or y_true
 df_train = df_train[['y_true', 'y_pred']]
-df_train.to_csv('plots/regression_results_train.csv', index=False)
+# df_train.to_csv('plots/regression_results_train.csv', index=False)
