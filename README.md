@@ -1,9 +1,8 @@
 # Modeling ML Performance
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15322707.svg)](https://doi.org/10.5281/zenodo.15322707)
 
-[![DOI](To be defined)
-
-### Repository of the work entitled ""
+### Repository of the work entitled "Modeling and Predicting Machine Learning Performance"
 
 ## Structure
 
