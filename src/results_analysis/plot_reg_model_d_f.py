@@ -211,9 +211,6 @@ print(f"Test dataset ({len(y_test)} rows): R^2: {round(test_r2, 3)}, Adjusted R^
 # plot_regression_results(y_train, y_pred_train, 'Regression Predictions vs. True Values (Train Set)', 'MCC', 'train')
 plot_regression_results(y_test, y_pred_test, 'Regression Predictions vs. True Values (Test Set)', 'MCC', 'test')
 
-# Train dataset (18671 rows): R^2: 0.435, Adjusted R^2: 0.434, sMAPE: 0.329, MAE: 0.167
-# Test dataset (4668 rows): R^2: 0.424, Adjusted R^2: 0.423, sMAPE: 0.33, MAE: 0.168
-
 # exporting a csv with the real and predicted values
 df_test['y_pred'] = y_pred_test
 df_test['y_true'] = y_test
