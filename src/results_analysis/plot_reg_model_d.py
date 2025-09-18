@@ -63,7 +63,7 @@ def plot_regression_results(y_true, y_pred, title, target='', set_name='train'):
 
     # Save and show
     plt.savefig(f'plots/pdf//regression_{set_name}.pdf', format='pdf', bbox_inches='tight')
-    plt.savefig(f'plots/png/regression_{set_name}.png', format='png', bbox_inches='tight', dpi=95, transparent=True)
+    plt.savefig(f'plots/png/regression_{set_name}.png', format='png', bbox_inches='tight', dpi=150, transparent=True)
     plt.show()
 
 def train_test_split_regression(X, y, test_size=0.2, b='auto', random_state=42):
