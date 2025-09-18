@@ -82,7 +82,7 @@ for ax, col in zip(axes, ["PCC", "SRCC"]):
 # fig.suptitle("Correlation between Dataset Characteristics and Model Performance", fontsize=14)
 # plt.tight_layout(rect=[0, 0.03, 1, 0.95])
 plt.tight_layout()
-plt.savefig('plots/f_relevance.pdf', format='pdf', bbox_inches='tight')
+plt.savefig('plots/pdf/f_relevance.pdf', format='pdf', bbox_inches='tight')
 plt.show()
 
 # exporting the plotted data to csv
