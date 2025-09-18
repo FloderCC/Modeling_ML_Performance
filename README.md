@@ -145,9 +145,9 @@ Stages 5 to 8 are optional and can be executed in any order.
 
 ## Symbolic regression Models
 
-| Model Features            | R² (Train/Test) | Adj. R² (Train/Test) | sMAPE (Train/Test) | SR Equation                    | Predictions on the Test                          |
-|----------------------------|-----------------|----------------------|--------------------|--------------------------------|--------------------------------------------------|
-| Dataset                   | 0.378 / 0.361   | 0.377 / 0.360        | 0.512 / 0.515      | ![Eq. 1](src/results/eq_1.PNG) | ![Fig. 1](src/plots/png/regression_test.png)     |
-| Dataset (MCC > 0 only)    | 0.435 / 0.424   | 0.434 / 0.423        | 0.329 / 0.330      | ![Eq. 2](src/results/eq_2.PNG) | ![Fig. 1](src/plots/png/regression_p_test.png)   |
-| Dataset + Model Type      | 0.510 / 0.508   | 0.509 / 0.506        | 0.501 / 0.504      | ![Eq. 3](src/results/eq_3.PNG) | ![Fig. 1](src/plots/png/regression_mt_test.png)  |
-| Dataset + Model           | **0.529 / 0.534** | **0.529 / 0.533**    | **0.489 / 0.489**  | ![Eq. 4](src/results/eq_4.PNG) | ![Fig. 1](src/plots/png/regression_m_test.png)   |
+| Model Features            | R² (Train/Test) | Adj. R² (Train/Test) | sMAPE (Train/Test) | SR Equation                    | Predictions on the Test Data                    |
+|----------------------------|-----------------|----------------------|--------------------|--------------------------------|-------------------------------------------------|
+| Dataset                   | 0.378 / 0.361   | 0.377 / 0.360        | 0.512 / 0.515      | ![Eq. 1](src/results/eq_1.PNG) | ![Fig. 1](src/plots/png/regression_test.png)    |
+| Dataset (MCC > 0 only)    | 0.435 / 0.424   | 0.434 / 0.423        | 0.329 / 0.330      | ![Eq. 2](src/results/eq_2.PNG) | ![Fig. 1](src/plots/png/regression_p_test.png)  |
+| Dataset + Model Type      | 0.510 / 0.508   | 0.509 / 0.506        | 0.501 / 0.504      | ![Eq. 3](src/results/eq_3.PNG) | ![Fig. 1](src/plots/png/regression_mt_test.png) |
+| Dataset + Model           | **0.529 / 0.534** | **0.529 / 0.533**    | **0.489 / 0.489**  | ![Eq. 4](src/results/eq_4.PNG) | ![Fig. 1](src/plots/png/regression_m_test.png)  |
