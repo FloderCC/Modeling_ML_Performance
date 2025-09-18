@@ -145,8 +145,6 @@ Stages 5 to 8 are optional and can be executed in any order.
 
 ## Symbolic regression Models
 
-# Predictive performance of symbolic models across different feature sets
-
 | Model Features            | R² (Train/Test) | Adj. R² (Train/Test) | sMAPE (Train/Test) | SR Equation                    | Predictions on the Test                          |
 |----------------------------|-----------------|----------------------|--------------------|--------------------------------|--------------------------------------------------|
 | Dataset                   | 0.378 / 0.361   | 0.377 / 0.360        | 0.512 / 0.515      | ![Eq. 1](src/results/eq_1.PNG) | ![Fig. 1](src/plots/png/regression_test.png)     |
